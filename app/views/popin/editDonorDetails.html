@@ -1,0 +1,23 @@
+<h5>General information</h5>
+<div class="form-group">
+  <label for="firstName">First Name:</label>
+  <input type="text" class="form-control" id="firstName" ng-model="donorToModified.firstName">
+  <label for="familyName">Family Name:</label>
+  <input type="text" class="form-control" id="familyName" ng-model="donorToModified.familyName">
+</div>
+
+<hr>
+
+<h5>Address</h5>
+<div class="form-group">
+  <label for="streetNumber">Street Number:</label>
+  <input type="number" class="form-control" id="streetNumber" ng-model="donorToModified.address.streetNumber">
+  <label for="street">Street</label>
+  <input type="text" class="form-control" id="street" ng-model="donorToModified.address.street">
+  <label for="postalCode">Postal Code</label>
+  <input type="number" class="form-control" id="postalCode" ng-model="donorToModified.address.postalCode">
+  <label for="town">Town</label>
+  <input type="text" class="form-control" id="town" ng-model="donorToModified.address.town">
+</div>
+
+<button type="button" class="btn btn-default" ng-click="updateDonor(donorToModified)">Save</button>

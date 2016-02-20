@@ -1,0 +1,22 @@
+<h4>Add Donation for <strong>{{donorToModified.firstName}} {{donorToModified.familyName}}: </strong></h4>
+
+<div class="form-group">
+  <label for="eventName">Event Name:</label>
+  <input type="text" class="form-control" id="eventName" ng-model="donation.eventName">
+  <label for="purpose">Purpose:</label>
+  <input type="text" class="form-control" id="purpose" ng-model="donation.purpose">
+</div>
+
+<div class="form-group">
+  <label for="amount">Amount:</label>
+  <input type="text" class="form-control" id="amount" ng-model="donation.amount">
+</div>
+
+<div class="form-group">
+  <label for="month">Month:</label>
+  <input type="text" class="form-control" id="month" ng-model="donation.dateOfPayment.month">
+  <label for="month">Year:</label>
+  <input type="number" class="form-control" id="year" ng-model="donation.dateOfPayment.year">
+</div>
+
+<button type="button" class="btn btn-default" ng-click="addDonation(donation)">Add donation</button>

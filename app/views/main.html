@@ -1,0 +1,45 @@
+<div class="row marketing">
+  <h4>Add donor</h4>
+  <p>
+
+  <h5>Donors list</h5>
+
+  <ul>
+    <li id="{{donor.$id}}" ng-repeat="donor in donors">
+      {{donor.firstName}}
+      <button type="button" class="btn btn-default" ng-click="deleteDonor(donor)">Delete donor</button>
+      <button type="button" class="btn btn-default" ng-click="openEditDonorDetailsPopIn(donor)">Edit details</button>
+      <button type="button" class="btn btn-default" ng-click="openAddDonationPopIn(donor)">Add donation</button>
+      <div ng-repeat="donation in getDonations(donor)">{{donation.eventName}}
+        <button type="button" class="btn btn-default" ng-click="deleteDonation(donor,donation)">Delete donation</button>
+
+      </div>
+    </li>
+  </ul>
+
+  <h5>General information</h5>
+  <div class="form-group">
+    <label for="firstName">First Name:</label>
+    <input type="text" class="form-control" id="firstName" ng-model="firstName">
+    <label for="familyName">Family Name:</label>
+    <input type="text" class="form-control" id="familyName" ng-model="familyName">
+  </div>
+
+  <hr>
+
+  <h5>Address</h5>
+  <div class="form-group">
+    <label for="streetNumber">Street Number:</label>
+    <input type="number" class="form-control" id="streetNumber" ng-model="streetNumber">
+    <label for="street">Street</label>
+    <input type="text" class="form-control" id="street" ng-model="street">
+    <label for="postalCode">Postal Code</label>
+    <input type="number" class="form-control" id="postalCode" ng-model="postalCode">
+    <label for="town">Town</label>
+    <input type="text" class="form-control" id="town" ng-model="town">
+  </div>
+
+  <button type="button" class="btn btn-default" ng-click="addDonor()">Add donor</button>
+
+  </p>
+</div>
